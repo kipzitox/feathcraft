@@ -202,3 +202,16 @@ La migración se considera completa cuando:
 - Exportación PNG/GLB/OBJ/USD + share nativo funcionan.
 - CI genera APK release firmado en GitHub Actions.
 - El build web/PWA sigue funcionando.
+
+---
+
+## 9. Estado final (2026-11-09)
+
+- Migracion completa a Tauri 2 (sin Expo/RN, sin artefactos web).
+- Release publica: v1.0.3 (APK firmado, 43 MB, universal arm64+x86_64).
+- Fix v1.0.3: botones del topbar del editor (undo/redo/persp/axis/save/export) usan
+  SketchbookSDK directamente; postCommand('undo'/'redo') no funcionaba porque esos
+  comandos no estan registrados en el Bridge del motor, y whenBridgeReady verificaba
+  SketchbookBridge (no expuesto en el build classic).
+- Historia aplastada a un unico commit (5176d81) antes de publicar el repo (publico).
+- Releases activas: v1.0.2 y v1.0.3 (Latest). README con seccion de donaciones (Ko-fi).
