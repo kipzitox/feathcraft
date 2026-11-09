@@ -215,3 +215,10 @@ La migración se considera completa cuando:
   SketchbookBridge (no expuesto en el build classic).
 - Historia aplastada a un unico commit (5176d81) antes de publicar el repo (publico).
 - Releases activas: v1.0.2 y v1.0.3 (Latest). README con seccion de donaciones (Ko-fi).
+
+## 10. Renombrado feathcraft + limpieza final (2026-11-09)
+
+- Repo y proyecto renombrados: fheatcraft -> feathcraft (github.com/kipzitox/feathcraft).
+- App ID: com.feathcraft.app. Publicada release v1.0.4 (universal, 4 ABIs, firmada).
+- Despliegues web: ninguno activo ni en docs (sin GitHub Pages, sin PWA/service worker).
+- package-lock regenerado: solo @tauri-apps/cli (arbol Expo eliminado por completo).
