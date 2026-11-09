@@ -1,0 +1,34 @@
+[[permission]]
+identifier = "allow-list-projects"
+description = "List all projects"
+commands.allow = ["list_projects"]
+
+[[permission]]
+identifier = "allow-read-project"
+description = "Read a project by id"
+commands.allow = ["read_project"]
+
+[[permission]]
+identifier = "allow-write-project"
+description = "Create or update a project"
+commands.allow = ["write_project"]
+
+[[permission]]
+identifier = "allow-delete-project"
+description = "Delete a project by id"
+commands.allow = ["delete_project"]
+
+[[permission]]
+identifier = "allow-save-export"
+description = "Save an exported file to cache"
+commands.allow = ["save_export"]
+
+[default]
+description = "Default permissions for fheatcraft"
+permissions = [
+  "allow-list-projects",
+  "allow-read-project",
+  "allow-write-project",
+  "allow-delete-project",
+  "allow-save-export",
+]

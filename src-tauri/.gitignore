@@ -1,0 +1,7 @@
+# Rust build artifacts
+/target
+
+# Tauri-generated mobile projects (regenerable via `npx tauri android init`)
+/gen
+
+# Cargo registry cache local to the spike (lockfile is committed intentionally)
