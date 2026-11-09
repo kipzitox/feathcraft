@@ -1,4 +1,4 @@
-// fheatcraft — Tauri v2 entry point (desktop + Android via mobile_entry_point).
+// feathcraft — Tauri v2 entry point (desktop + Android via mobile_entry_point).
 //
 // Spike: the app shell is the existing Three.js engine (assets/engine),
 // loaded offline exactly like the Expo/RN WebView did. No native screens yet.
@@ -19,5 +19,5 @@ pub fn run() {
             commands::save_export,
         ])
         .run(tauri::generate_context!())
-        .expect("error while running fheatcraft");
+        .expect("error while running feathcraft");
 }

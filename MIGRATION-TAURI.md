@@ -127,7 +127,7 @@ en Tauri con el engine abriéndose al abrir un proyecto.
 
 ### Fase 5 — Opcionales (después)
 - Updater (Tauri updater plugin, si soporta mobile en la versión usada).
-- Deep links / scheme `fheatcraft`.
+- Deep links / scheme `feathcraft`.
 - Migración de datos de usuarios RN → Tauri (no aplica: app nunca publicada).
 
 ---

@@ -1,4 +1,4 @@
-# fheatcraft
+# feathcraft
 
 Aplicacion movil Android de dibujo 3D profesional con interfaz Material Design 3,
 construida con **Tauri 2** (backend Rust) y un motor **Three.js** que corre
@@ -39,7 +39,6 @@ que el motor puede sustituirse sin tocar la UI y viceversa.
 | Plataforma | Estado        | Notas                                      |
 |------------|---------------|--------------------------------------------|
 | Android    | Funcional     | APK release firmado                         |
-| Web/PWA    | No incluido   | El motor es PWA-capable (service worker)    |
 
 ## Requisitos
 
@@ -51,13 +50,13 @@ que el motor puede sustituirse sin tocar la UI y viceversa.
 
 ```bash
 npm install                # instala dependencias
-npm run build:frontend     # genera dist-tauri (shell web + engine)
+npm run build:frontend     # genera dist-tauri (shell + engine)
 npm run android:tauri:debug # APK debug (emulador/dispositivo)
 npm run android:tauri      # APK release (requiere firma, ver abajo)
 ```
 
-El APK release se firma con `apksigner` usando el keystore en
-`C:\Users\LENOVO\keystores\fheatcraft.jks` (alias `fheatcraft`).
+El APK release se firma con `apksigner` usando un keystore local (alias
+`feathcraft`, no incluido en el repositorio).
 Guarda una copia de seguridad del keystore y su contraseña.
 
 ## Scripts disponibles
@@ -65,13 +64,13 @@ Guarda una copia de seguridad del keystore y su contraseña.
 | Script                  | Descripcion                                          |
 |-------------------------|------------------------------------------------------|
 | `npm run tauri`         | CLI de Tauri (passthrough)                           |
-| `npm run build:frontend`| Genera dist-tauri (shell web + motor + iconos Android)|
+| `npm run build:frontend`| Genera dist-tauri (shell + motor + iconos Android)|
 | `npm run android:tauri:debug` | Genera APK debug                               |
 | `npm run android:tauri` | Genera APK release (sin firmar)                      |
 
 ## Estructura
 
-- `frontend/` - shell web que sirve como frontend de Tauri (biblioteca + editor + reskin MD3)
+- `frontend/` - shell (HTML/JS) que sirve como frontend de Tauri (biblioteca + editor + reskin MD3)
 - `assets/engine/` - fuente del motor 3D (Three.js) que se embebe en Android
 - `src-tauri/` - backend Rust (comandos, plugins, proyecto Android generado)
 - `scripts/` - utilidades de build (frontend, iconos, parche Android)
@@ -94,7 +93,7 @@ https://ko-fi.com/kipzitox
 
 ## Licencia
 
-Este proyecto se distribuye bajo la licencia **fheatcraft Proprietary License**.
+Este proyecto se distribuye bajo la licencia **feathcraft Proprietary License**.
 Ver el archivo [LICENSE](LICENSE) para los terminos completos.
 
 En resumen: **queda prohibida la copia, distribucion, modificacion, venta,

@@ -1,4 +1,4 @@
-// fheatcraft — Tauri commands for project storage.
+// feathcraft — Tauri commands for project storage.
 //
 // Projects are stored as one JSON file per project under the app data dir:
 //   {app_data}/projects/{id}.json

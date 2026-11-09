@@ -1,4 +1,4 @@
-/* fheatcraft Web Desktop — vanilla JS shell that drives the engine via the
+/* feathcraft — Desktop shell (vanilla JS) that drives the engine via the
    Sketchbook Bridge protocol (same as the React Native app).
    Parent window posts {type:'cmd', id, name, payload} to the engine iframe;
    the engine's rn-transport forwards responses/events back to window.parent. */
@@ -6,7 +6,7 @@
 (function () {
   "use strict";
 
-  var STORE_KEY = "fheatcraft_projects";
+  var STORE_KEY = "feathcraft_projects";
   var frame = document.getElementById("engineFrame");
 
   // ---------- i18n (ES/EN) ----------
@@ -15,26 +15,26 @@
       all: "Todos", recent: "Recientes", favorites: "Favoritos", trash: "Papelera",
       empty: "No hay proyectos aquí.", emptyTrash: "La papelera está vacía.",
       newProject: "Nuevo proyecto", import: "Importar", search: "Buscar proyectos…",
-      settings: "Ajustes", about: "Acerca de fheatcraft", clearAll: "Limpiar todo",
+      settings: "Ajustes", about: "Acerca de feathcraft", clearAll: "Limpiar todo",
       clearConfirm: "¿Borrar todos los proyectos?", saved: "Guardado",
       theme: "Tema", light: "Claro", dark: "Oscuro",
       language: "Idioma", spanish: "Español", english: "English",
-      aboutText: "fheatcraft · Editor 3D\nMotor de modelado y bocetado 3D profesional.",
+      aboutText: "feathcraft · Editor 3D\nMotor de modelado y bocetado 3D profesional.",
       info: "Información",
     },
     en: {
       all: "All", recent: "Recent", favorites: "Favorites", trash: "Trash",
       empty: "No projects here.", emptyTrash: "Trash is empty.",
       newProject: "New project", import: "Import", search: "Search projects…",
-      settings: "Settings", about: "About fheatcraft", clearAll: "Clear all",
+      settings: "Settings", about: "About feathcraft", clearAll: "Clear all",
       clearConfirm: "Delete all projects?", saved: "Saved",
       theme: "Theme", light: "Light", dark: "Dark",
       language: "Language", spanish: "Español", english: "English",
-      aboutText: "fheatcraft · 3D Editor\nProfessional 3D modeling and sketch engine.",
+      aboutText: "feathcraft · 3D Editor\nProfessional 3D modeling and sketch engine.",
       info: "Info",
     },
   };
-  function currentLang() { return localStorage.getItem("fheatcraft_language") || "es"; }
+  function currentLang() { return localStorage.getItem("feathcraft_language") || "es"; }
   function t(key) {
     var l = currentLang();
     return (I18N[l] && I18N[l][key]) || (I18N.es && I18N.es[key]) || key;
@@ -64,7 +64,7 @@
   }
 
   // ---------- theme ----------
-  function currentTheme() { return localStorage.getItem("fheatcraft_theme") || "light"; }
+  function currentTheme() { return localStorage.getItem("feathcraft_theme") || "light"; }
   function applyTheme(mode) {
     try {
       if (mode === "dark") {
@@ -75,7 +75,7 @@
           frame.contentDocument.documentElement.removeAttribute("data-theme");
       }
     } catch (e) {}
-    localStorage.setItem("fheatcraft_theme", mode);
+    localStorage.setItem("feathcraft_theme", mode);
     localStorage.setItem("sk3d_theme", mode);
   }
 
@@ -541,7 +541,7 @@
 
   function currentName() {
     var p = projects.find(function (x) { return x.id === currentId; });
-    return p ? p.name : "fheatcraft";
+    return p ? p.name : "feathcraft";
   }
 
   function saveCurrent() {
@@ -647,7 +647,7 @@
       btn.className = "sheet-btn" + (currentLang() === l ? " active" : "");
       btn.textContent = l === "es" ? t("spanish") : t("english");
       btn.addEventListener("click", function () {
-        localStorage.setItem("fheatcraft_language", l);
+        localStorage.setItem("feathcraft_language", l);
         applyLang();
         renderSettings();
         toast(t("saved"));

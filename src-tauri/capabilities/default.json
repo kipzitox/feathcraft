@@ -1,6 +1,6 @@
 {
   "identifier": "default",
-  "description": "Default capabilities for fheatcraft",
+  "description": "Default capabilities for feathcraft",
   "windows": ["main"],
   "permissions": [
     "core:default",

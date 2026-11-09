@@ -3,9 +3,9 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-const dst = join(root, 'src-tauri', 'gen', 'android', 'app', 'src', 'main', 'java', 'com', 'fheatcraft', 'app', 'MainActivity.kt');
+const dst = join(root, 'src-tauri', 'gen', 'android', 'app', 'src', 'main', 'java', 'com', 'feathcraft', 'app', 'MainActivity.kt');
 
-const content = `package com.fheatcraft.app
+const content = `package com.feathcraft.app
 
 import android.os.Build
 import android.os.Bundle

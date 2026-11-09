@@ -1,14 +1,14 @@
 [package]
-name = "fheatcraft"
+name = "feathcraft"
 version = "1.0.0"
-description = "fheatcraft: pro 3D drawing app (Expo RN replacement, Tauri v2 spike)"
+description = "feathcraft: pro 3D drawing app (Tauri v2)"
 edition = "2021"
 rust-version = "1.77.2"
 
 # Tauri v2 mobile (Android) loads the app through a JNI entry point, so the
-# crate must also build as a cdylib/staticlib linked into libfheatcraft_lib.
+# crate must also build as a cdylib/staticlib linked into libfeathcraft_lib.
 [lib]
-name = "fheatcraft_lib"
+name = "feathcraft_lib"
 crate-type = ["staticlib", "cdylib", "rlib"]
 
 [build-dependencies]

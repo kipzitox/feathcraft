@@ -24,7 +24,7 @@ description = "Save an exported file to cache"
 commands.allow = ["save_export"]
 
 [default]
-description = "Default permissions for fheatcraft"
+description = "Default permissions for feathcraft"
 permissions = [
   "allow-list-projects",
   "allow-read-project",
