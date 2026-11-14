@@ -1,4 +1,8 @@
-# feathcraft
+<div align="center">
+  <img src="docs/icon.png" width="128" alt="feathcraft"><br>
+  <h1>feathcraft</h1>
+  <p><em>Dibujo 3D profesional, offline, en tu Android</em></p>
+</div>
 
 Aplicacion movil Android de dibujo 3D profesional con interfaz Material Design 3,
 construida con **Tauri 2** (backend Rust) y un motor **Three.js** que corre
@@ -33,6 +37,10 @@ que el motor puede sustituirse sin tocar la UI y viceversa.
 - Persistencia offline sin backend
 - Modo inmersivo (sin barra de estado ni navegacion del sistema)
 - Tema claro/oscuro y idioma ES/EN
+
+## Captura de pantalla
+
+![Editor 3D de feathcraft — dibujo con lapiz sobre el plano, panel de herramientas y gizmo de control](docs/screenshot.jpg)
 
 ## Plataformas
 
